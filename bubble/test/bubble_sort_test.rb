@@ -3,7 +3,7 @@ SimpleCov.start
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
-require './lib/bubble_sort'
+require_relative '../lib/bubble_sort'
 
 class BubbleSortTest < Minitest::Test
 
@@ -11,6 +11,6 @@ class BubbleSortTest < Minitest::Test
     sorter = BubbleSort.new
 
     assert_instance_of BubbleSort, sorter
-  end 
+  end
 
 end
