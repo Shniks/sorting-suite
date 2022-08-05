@@ -27,4 +27,12 @@ class InsertionSortTest < Minitest::Test
     assert_equal result, sorter.sort(unsorted)
   end
 
+  def test_if_it_can_insertion_sort_an_array_of_10_elements
+    sorter = BubbleSort.new
+    unsorted = ["f", "b", "z", "d", "k", "p", "g", "n", "e", "x"]
+    result = ["b", "d", "e", "f", "g", "k", "n", "p", "x", "z"]
+
+    assert_equal result, sorter.sort(unsorted)
+  end
+
 end
