@@ -19,4 +19,12 @@ class InsertionSortTest < Minitest::Test
     assert_equal ["a", "b", "c", "d"], sorter.sort(["d", "b", "a", "c"])
   end
 
+  def test_if_it_can_insertion_sort_an_array_of_8_numbers
+    sorter = BubbleSort.new
+    unsorted = [23, 34, 12, 74, 2, 19, 11, 14]
+    result = [2, 11, 12, 14, 19, 23, 34, 74]
+
+    assert_equal result, sorter.sort(unsorted)
+  end
+
 end
