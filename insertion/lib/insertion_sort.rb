@@ -1,32 +1,37 @@
 class InsertionSort
 
+  attr_reader :sorted
+
+  def initialize
+    @sorted = []
+  end
+
   def sort(unsorted)
-    sorted = []
     until unsorted.empty?
-      iteration(unsorted, sorted)
+      iteration(unsorted)
     end
     sorted
   end
 
-  def iteration(unsorted, sorted)
+  def iteration(unsorted)
     if sorted.empty?
-      sorted_empty(unsorted, sorted)
+      sorted_empty(unsorted)
     else
-      sorted_not_empty(unsorted, sorted)
+      sorted_not_empty(unsorted)
     end
     pull_element_from_unsorted(unsorted)
   end
 
-  def sorted_empty(unsorted, sorted)
+  def sorted_empty(unsorted)
     sorted << unsorted.first
   end
 
-  def sorted_not_empty(unsorted, sorted)
+  def sorted_not_empty(unsorted)
     first = unsorted.first # First element in unsorted array
-    insert(sorted, first)
+    insert(first)
   end
 
-  def insert(sorted, first)
+  def insert(first)
     sorted.each_with_index do |value, index|
       if value > first
         sorted.insert(index, first)
