@@ -1,7 +1,7 @@
 class BubbleSort
 
   def sort(unsorted)
-    unsorted.length.times do |s = 0|
+    unsorted.length.times do
       iteration(unsorted)
     end
     unsorted
