@@ -27,4 +27,12 @@ class BubbleSortTest < Minitest::Test
     assert_equal result, sorter.sort(input)
   end
 
+  def test_if_it_can_bubble_sort_an_array_of_10_elements
+    sorter = BubbleSort.new
+    input = ["f", "b", "z", "d", "k", "p", "g", "n", "e", "x"]
+    result = ["b", "d", "e", "f", "g", "k", "n", "p", "x", "z"]
+
+    assert_equal result, sorter.sort(input)
+  end
+
 end
